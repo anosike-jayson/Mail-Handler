@@ -10,6 +10,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
+app.get('/stay-awake', (req, res, next) => {
+    res.status(200);
+    res.send({ message: 'Wake up' });
+  });
+
 app.post('/send', (req, res) => {
     const { name, email, message } = req.body;
 
