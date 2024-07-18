@@ -29,7 +29,7 @@ app.post('/send', (req, res) => {
 
     console.log(email);
     const mailOptions = {
-        from: email,
+        from: 'Website Contact Form',
         to: process.env.EMAIL_USER,
         subject: `Contact Form Submission from ${name}`,
         text: `You have a new message from your website contact form:\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`
